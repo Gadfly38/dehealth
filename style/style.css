@@ -1107,7 +1107,7 @@ margin:auto;
 .security_wrapper{
     background: linear-gradient(to bottom, #5E42EC, #3925B0);
     padding:100px 70px;
-    border-radius:40px;
+    width:100%;
 }
 .security_body{
     max-width: 1300px;
@@ -1132,9 +1132,9 @@ margin:auto;
     gap:24px;
 }
 .security_body_bottom_card{
-    background: linear-gradient(90deg, 
-  rgb(96,76,208) 17%,
-    rgb(80,59,156) 47%
+    background: linear-gradient(to right,
+  rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.05)
 );
     backdrop-filter: blur(32px);
     padding:24px;
@@ -1308,12 +1308,15 @@ img{
 
 .blueButton{
     width: fit-content;
-    padding:16px 20px;
+    padding:10px 20px;
     background-color: #5E42EC;
     border-radius: 30px;
     text-align: center;
+    font-size: 16px;
+    line-height: 24px;
     color:white;
     cursor: pointer;
+
 }
 
 /* About Styles */
@@ -1341,6 +1344,7 @@ img{
     flex-direction: row;
     justify-content: center;
     gap:24px;
+    margin-bottom:-40px;
 }
 .about_wrapper_top_carousel_article{
     max-width:353px;
@@ -1391,13 +1395,14 @@ img{
 .new_wrapper{
     display:flex;
     flex-direction: column;
-    gap:40px;
+    /* gap:40px; */
 }
 .new_wrapper_top_carousel{
     display:flex;
     flex-direction: row;
     justify-content: center;
     gap:24px;
+    margin-top:40px;
 }
 .new_wrapper_top_carousel_article{
     width:50%;
