@@ -1682,4 +1682,10 @@ img{
   .blog-header{
     padding:10px;
   }
+  .hero-description{
+    padding:10px;
+  }
+  .why_body img{
+    scale:0.8;
+  }
 }
