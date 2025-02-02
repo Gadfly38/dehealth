@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-family: "Poppins";
   src: url("../assets/font/Poppins-Regular.ttf") format("truetype");
@@ -1688,4 +1690,78 @@ img{
   .why_body img{
     scale:0.8;
   }
+  .text h2{
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .section2-item{
+    padding:10px;
+  }
+  .container{
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .text p{
+    font-size:18px;
+    line-height: 20px;
+}
+.section2-item-img img{
+    scale:0.8;
+}
+.featured-member{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.member-image{
+    display: flex;
+    scale:0.8;
+}
+.team-slider{
+    padding:0;
+}
+.section3{
+    padding:0;
+}
+.section4{
+    padding-top:20px;
+}
+.explore-item-left{
+    width:100%;
+}
+.explore-item-left-text{
+    width:auto;
+}
+.app_body{
+    padding:10px;
+}
+.reason_wrapper{
+    gap:20px;
+}
+.font500-44{
+    font-size: 32px;
+    line-height: 32px;
+    margin-top:20px;
+}
+.reason_wrapper{
+    width:100%;
+}
+.why_body{
+    gap:20px;
+}
+.about_body{
+    gap:20px;
+}
+.footer_wrapper_container{
+    padding:10px;
+    box-sizing: border-box;
+    width:100%;
+}
+/* .explore-item-right{
+    display: none;
+}
+
+.explore-item{
+    padding:10px;
+}  */
 }
