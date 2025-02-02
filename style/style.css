@@ -1679,4 +1679,7 @@ img{
   .text p{
     width:100%;
   }
+  .blog-header{
+    padding:10px;
+  }
 }
