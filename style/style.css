@@ -2012,6 +2012,9 @@ img{
     .footer_right_block{
         gap:8px;
     }
+    .margin-bottom-30{
+        margin-bottom: 30px;
+    }
 /* .explore-item-right{
     display: none;
 }
