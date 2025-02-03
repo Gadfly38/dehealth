@@ -1004,13 +1004,16 @@ margin:auto;
 }
 .app_body_content{
     display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content: center;
-    gap:24px 77px;
-    align-items: center;
+}
+.app_body_content_img{
+    max-width: 1139px;
+    width:100%;
 }
 
+.app_body_content_img2{
+    max-width: 1300px;
+    width:100%;
+}
 /* Why DeHealth */
 .why_body{
     max-width: 1200px;
@@ -1383,12 +1386,7 @@ img{
     gap:40px;
 }
 .about_wrapper_middle_content{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    gap:24px;
+    display: flex;    
 }
 .about_wrapper_middle_content_item{
     width:196px;
@@ -1949,7 +1947,13 @@ img{
         justify-content: center;
         gap:15px;
     }
-    
+    .about_wrapper_middle_content{
+        padding-left: 30px;
+        padding-right:30px;
+    }
+    .app_body{
+        padding: 30px;
+    }
 
 
 
