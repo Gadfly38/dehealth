@@ -1562,7 +1562,7 @@ img{
   }
   .navbar {
     /* Adjust navbar styles for mobile */
-    margin-top:60px;
+    margin-top:40px;
     flex-direction: column;
     align-items: center;
   }
@@ -1613,6 +1613,7 @@ img{
     /* Adjust team slider for mobile */
     flex-direction: column;
     align-items: center;
+    margin-bottom: -45px;
   }
 
   .blog-slider {
@@ -1676,7 +1677,7 @@ img{
   }
 
   .about_wrapper{
-    padding:40px 0;
+    padding:20px 0;
   }
   .footer_wrapper{
     padding:40px 0;
@@ -1718,7 +1719,7 @@ img{
     padding-bottom:0;
   }
   .section1{
-    padding-top:10px;
+    padding-top:20px;
   }
   .section1-title{
     font-size: 22px;
@@ -1853,23 +1854,23 @@ img{
         height:fit-content;
     }
     .section1-footer{
-        padding-top:20px;
+        padding-top:30px;
         padding-bottom:20px;
         font-size: 20px;
         line-height: 32px;
     }
     .section1-footerbtn{
-        margin-top:20px;
+        margin-top:0px;
     }
 
     .section1-footerbtn-container{
-        height:90px;
+        height:75px;
     }
     .section1-footer-left div img{
         scale:0.8;
     }
     .section2{
-        padding-top:30px;
+        padding-top:0px;
     }
     .number-title{
         padding-top:20px;
@@ -1887,7 +1888,7 @@ img{
     }
     .reason_wrapper{
         padding:10px;
-        padding-bottom:50px;
+        padding-bottom:20px;
         width:100%;
         box-sizing: border-box;
     }
@@ -1895,7 +1896,9 @@ img{
         
         width:100% !important;;
         padding:10px;
+        padding-top:20px;
         padding-bottom:50px;
+        gap:10px;
         box-sizing: border-box;
     }
     .imgwrapper{
@@ -1908,12 +1911,13 @@ img{
     .about_wrapper_middle{
         font-size: 28px;
         line-height: 32px;
+        gap:20px;
     }
     .security_body_bottom{
         margin-top: 20px;
     }
     .security_body_bottom_card{
-        padding:10;
+        padding:10px;
         color:white;
     }
     .new_wrapper_top_carousel_article{
@@ -1949,7 +1953,7 @@ img{
         margin-bottom:-47px;
     }
     .featured-member{
-        margin-top:-38px; 
+        margin-top:-45px; 
     }
     .footer_social_content_body{
         justify-content: center;
@@ -1973,11 +1977,44 @@ img{
         font-size: 16px;
         line-height: 24px;
     }
-
+    .member-image{
+        margin-bottom:-20px;
+    }
+    .blog-slider{
+        padding-bottom: 20px;
+    }
+    .about_wrapper_top{
+        gap:10px;
+    }
+    .font300-16{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    /* .blueButton{
+        padding:5px 10px;
+    } */
+    .slider-dots{
+        margin-top:10px;
+        margin-bottom: 0;
+    }
+    .about_wrapper_top_carousel{
+        margin-bottom:0;
+    }
+    .new_wrapper{
+        padding-top:0;
+    }
+    .margin-top-20{
+        margin-top:20px;
+    }
+    .footer_right_block_content{
+        gap:2px;
+    }
+    .footer_right_block{
+        gap:8px;
+    }
 /* .explore-item-right{
     display: none;
 }
-
 
 
 .explore-item{
