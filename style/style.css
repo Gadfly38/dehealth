@@ -1966,9 +1966,6 @@ img {
   .slider-container1 {
     flex-direction: column;
   }
-  .mobile-img {
-    right: 0;
-  }
   .section1-body-right {
     padding: 0;
     width: 100%;
@@ -2029,13 +2026,16 @@ img {
   .section1-left-img img {
     width: 50%;
   }
+  .section1-left-img>img {
+    width: 65% !important;
+  }
   .footer_body {
     padding: 0;
   }
-  .mobile-img {
+  /* .mobile-img {
     width: 30% !important;
     right: 40%;
-  }
+  } */
   .section1-body-left {
     width: 100%;
   }
