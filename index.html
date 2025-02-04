@@ -113,7 +113,7 @@
         <div class="hero">
           <div class="hero-title">
             Welcome to DeHealth <br />
-            the world’s first health<br />
+            the world's first health<br />
             super app.
           </div>
           <div class="hero-description">
@@ -196,11 +196,25 @@
                 class="rec-img"
                 alt="mobile-img"
               />
-              <img
+              <div class="mobile-img" >
+                <div class="mobile-img-1">
+                  <img
                 src="assets/images/mobile.png"
-                class="mobile-img"
+                class="mobile-img-fixed"
                 alt="mobile-img"
               />
+              <div class="mobile-img-content-container">
+              <img class="mobile-img-content" src="assets/images/mobile-slider/Screen(1).png" alt="mobile-img">
+              <img class="mobile-img-content" src="assets/images/mobile-slider/Screen(2).png" alt="mobile-img">
+              <img class="mobile-img-content" src="assets/images/mobile-slider/Screen(3).png" alt="mobile-img">
+              <img class="mobile-img-content" src="assets/images/mobile-slider/Screen(4).png" alt="mobile-img">
+              <img class="mobile-img-content" src="assets/images/mobile-slider/Screen(5).png" alt="mobile-img">
+              <img class="mobile-img-content" src="assets/images/mobile-slider/Screen(6).png" alt="mobile-img">
+              <img class="mobile-img-content" src="assets/images/mobile-slider/Screen(7).png" alt="mobile-img">
+            </div>            
+            </div>
+              </div>
+              
             </div>
           </div>
           <div class="section1-body-right">
@@ -643,7 +657,7 @@
                           securely storing your medical records to scheduling
                           appointments and accessing personalized insights,
                           <span
-                            >we’re here to help you live your healthiest,
+                            >we're here to help you live your healthiest,
                             happiest and longer life</span
                           >
                         </div>
@@ -706,9 +720,9 @@
                           Health for Humanity
                         </div>
                         <div class="explore-item-left-text">
-                          At DeHealth, we’re committed to making the world a
+                          At DeHealth, we're committed to making the world a
                           healthier, greener place. Through initiatives like
-                          reforestation and accessible healthcare, we’re
+                          reforestation and accessible healthcare, we're
                           connecting innovation with impact to create a
                           sustainable future.<br />
                           <span
@@ -759,7 +773,8 @@
             <div class="user_body_content_card_left">
               <img src="assets/imgs/userCase/icon.png" alt="Yahoo" />
               <span class="font500-18"
-                >Health During Travel<br />and Migration</span
+                >Health During Travel<br />
+                and Migration</span
               >
             </div>
             <img src="assets/imgs/userCase/arrow.png" alt="Yahoo" />
@@ -816,7 +831,7 @@
             >Why DeHealth?</span
           >
           <span class="font500-18" style="margin-bottom: 24px"
-            >We’re not just another health app. Built by leading doctors and
+            >We're not just another health app. Built by leading doctors and
             scientists, DeHealth is the only app that:</span
           >
           <div class="why_body_content_middle">
@@ -924,7 +939,7 @@
               <div class="about_wrapper_top_carousel_article_top">
                 <img src="assets/imgs/media/1.png" alt="Yahoo" />
                 <span class="font_italic"
-                  >“The world's first healthcare metaverse from DeHealth”</span
+                  >"The world's first healthcare metaverse from DeHealth"</span
                 >
               </div>
               <div class="about_wrapper_top_carousel_article_middle">
@@ -942,7 +957,7 @@
               <div class="about_wrapper_top_carousel_article_top">
                 <img src="assets/imgs/media/2.png" alt="Yahoo" />
                 <span class="font_italic"
-                  >“Ukrainian Cyber Police Will Work with DeHealth”</span
+                  >"Ukrainian Cyber Police Will Work with DeHealth"</span
                 >
               </div>
               <div class="about_wrapper_top_carousel_article_middle">
@@ -961,7 +976,7 @@
               <div class="about_wrapper_top_carousel_article_top">
                 <img src="assets/imgs/media/3.png" alt="Yahoo" />
                 <span class="font_italic"
-                  >“The Blockchain-Based Healthcare Market Today”</span
+                  >"The Blockchain-Based Healthcare Market Today"</span
                 >
               </div>
               <div class="about_wrapper_top_carousel_article_middle">
@@ -1172,4 +1187,81 @@
       </div>
     </div>
   </body>
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const items = document.querySelectorAll('.section1-item');
+  const images = document.querySelectorAll('.mobile-img-content');
+  let currentIndex = 0;
+  const slideInterval = 3000; // Time in milliseconds for each slide
+  let isDragging = false;
+  let startX = 0;
+
+  function showImage(index) {
+    // Remove active and previous classes from all images
+    images.forEach(img => {
+      img.classList.remove('active');
+      img.classList.remove('previous');
+    });
+    items.forEach(item => {
+      item.classList.remove('section1-item-hover');
+    });
+
+    // Add previous class to the current image
+    if (images[currentIndex]) {
+      images[currentIndex].classList.add('previous');
+    }
+
+    // Update current index
+    currentIndex = index;
+
+    // Add active class to the new image
+    if (images[currentIndex]) {
+      images[currentIndex].classList.add('active');
+      items[currentIndex].classList.add('section1-item-hover');
+    }
+  }
+
+  function nextImage() {
+    const nextIndex = (currentIndex + 1) % images.length;
+    showImage(nextIndex);
+  }
+
+  // Set up automatic sliding
+  setInterval(nextImage, slideInterval);
+
+  items.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      showImage(index);
+    });
+  });
+
+  // Drag functionality
+  images.forEach((img, index) => {
+    img.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX;
+    });
+
+    img.addEventListener('mouseup', (e) => {
+      if (isDragging) {
+        const endX = e.pageX;
+        if (startX > endX) {
+          nextImage();
+        } else if (startX < endX) {
+          const prevIndex = (currentIndex - 1 + images.length) % images.length;
+          showImage(prevIndex);
+        }
+        isDragging = false;
+      }
+    });
+
+    img.addEventListener('mouseleave', () => {
+      isDragging = false;
+    });
+  });
+
+  // Initialize the first image as active
+  showImage(0);
+});
+  </script>
 </html>
